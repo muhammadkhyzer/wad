@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require_once "db_connection.php";
@@ -105,7 +106,7 @@ if(!isset($_SESSION['user_email'])){
                 include ('view_categories.php');
             }
             else if(isset($_GET['insert_category'])){
-                include ('insert_category.php');
+                include ('CATEGORY.php');
             }
             else if(isset($_GET['edit_cat'])){
                 include ('edit_cat.php');
@@ -117,7 +118,7 @@ if(!isset($_SESSION['user_email'])){
                 include('view_brands.php');
             }
             else if(isset($_GET['insert_brand'])) {
-                include('insert_brand.php');
+                include('brand.php');
             }
             else if(isset($_GET['edit_brand'])) {
                 include('edit_brand.php');
@@ -142,7 +143,6 @@ if(!isset($_SESSION['user_email'])){
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');
         });
-
     });
 </script>
 </body>
